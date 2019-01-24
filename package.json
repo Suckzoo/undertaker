@@ -1,0 +1,22 @@
+{
+  "name": "undertaker",
+  "version": "1.0.0",
+  "description": "Remove EC2 instances and its related components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suckzoo/undertaker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suckzoo/undertaker/issues"
+  },
+  "homepage": "https://github.com/Suckzoo/undertaker#readme",
+  "dependencies": {
+    "aws-sdk": "^2.393.0"
+  }
+}
