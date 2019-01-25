@@ -1,0 +1,10 @@
+{
+  "region": "sa-east-1",
+  "elb": [
+    "replay-sa-internal-alb",
+    "replay-sa-public-alb"
+  ],
+  "instances": [
+  ],
+  "ignoreVpc": false
+}
