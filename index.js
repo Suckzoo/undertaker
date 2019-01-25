@@ -2,14 +2,14 @@ const readline = require('readline');
 const action = require('./action');
 
 let config = {
-  real: false
+  apply: false
 };
 process.argv.forEach(v => {
-  v.replace(/--/g, '');
+  v = v.replace(/--/g, '');
   config[v] = true;
 });
 
-if (process.apply) {
+if (config.apply) {
   const r = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -19,8 +19,10 @@ if (process.apply) {
       execute(config);
     } else if (answer.toLowerCase() === 'n') {
       console.log('Abort.');
+      process.exit(0);
     } else {
       console.log('Invalid input');
+      process.exit(0);
     }
   })
 } else {
@@ -33,5 +35,6 @@ function execute() {
   }).catch(err => {
     console.log('FAILED!!!!!!!!');
     console.error(err);
+    process.exit(1);
   });
 }
